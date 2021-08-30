@@ -23,12 +23,12 @@ public class TicTacToeGame {
 		System.out.println("Enter X or 0 ");
 		char playGame = sc.next().charAt(0);
 		
-		if(playGame == 'X' || playGame == '0') {
+		if(playGame == 'X') {
 			
 			System.out.println("player turn x");
 			System.out.println("Computer turn 0");
 		}
-		else {
+		else if(playGame == '0') {
 			
 			System.out.println("player turn 0");
 			System.out.println("Computer turn X");
