@@ -5,16 +5,18 @@ import java.util.Scanner;
 public class TicTacToeGame {
 	public static char[] box= new char[10];
    public static final char[] charArray = new char[10];
+   static Scanner sc = new Scanner(System.in);
    
-	public static void main(String[] args) {
+   
+   public static void main(String[] args) {
 		printBoard();
 		playGame();
 		displayBoard();
+		selectBox();
 		
-	}
+		}
 
-
-	public static void printBoard() {
+   public static void printBoard() {
 		int count = 0;
 		int i;
 		for (i = 1; i < charArray.length; i++) {
@@ -55,11 +57,28 @@ public class TicTacToeGame {
             System.out.println("   " + box[7] + "  |  " + box[8] + "   |  " + box[9] + "   ");
             System.out.println("      |      |      ");
 		}
-           
-		}
 
 
+        public static void selectBox() {
+        	
+        	 System.out.println("Select from 1 to 9 : ");
+             int boxValue = sc.nextInt();
+             if (boxValue < 1 || boxValue > 9) {
+                 System.out.println(" Invalid !!!!!! ");
+                selectBox();
+             } 
+             
+             else if (boxValue > 1 || boxValue < 9) {
+            	 System.out.println(" Enter the Value ");
+            	 
+             }
+                 displayBoard();      	
+        	   }
+           }
 
+        		
+            
+        
 		
 			
 		
